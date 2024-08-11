@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #8D99AE; */
+    background: linear-gradient(155deg, #8D99AE, #EF233C);
+    padding: 2vw;
+}
+.todo-app {
+    width: 35%;
+    border-radius: 30px;
+    background-color: #EDF2F4;
+    padding: 2vw 2vw;
+    margin: 2vw auto 4vw;
+}
+.todo-app h2 {
+    color: #98021b;
+    display: flex;
+    align-items: center;
+}
+.todo-img {
+    width: 1.4vw;
+    margin: 0.2vw 0 0 0.2vw;
+    margin-left: 0.6vw;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 4vw;
+    background-color: #2B2D42;
+    padding-left: 0.2vw;
+    margin-top: 0.8vw;
+}
+#input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    padding: 1.2vw; 
+    font-size: 16px;
+}
+#input-box::placeholder {
+    color: #8D99AE;
+}
+.add-btn {
+   outline: none;
+   border: none;
+   background-color: #EF233C;
+   color: #2B2D42;
+   border-radius: 4vw;
+   padding: 1.2vw 2.4vw;
+   font-weight: bold;
+   font-size: 16px;
+}
+ul {
+    margin-top: 0.8vw;
+}
+ul li {
+    list-style: none;
+    padding: 0.4vw 3vw;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    color: #2B2D42;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 1.2vw;
+    height: 2.8vh;
+    background-image: url(images/circle.png);
+    border-radius: 50%;
+    filter: opacity(80%);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: 2.3vw;
+    height: 5.2vh;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background-color: #8D99AE;
+}
+ul li span img {
+    width: 0.6vw;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+.delete-all {
+    display: none;
+}
+.visible {
+    display: block;
+    outline: none;
+    border: none;
+    background-color: #EF233C;
+    color: #2B2D42;
+    border-radius: 4vw;
+    padding: 0.4vw 2.4vw;
+    font-weight: bold;
+    font-size: 16px;
+    margin: auto;
+}
+@media screen and (max-width: 600px) {
+    .todo-app {
+        width: 75%;
+        padding: 6vw 6vw;
+    }
+    .todo-app h2 {
+        font-size: 18px;
+    }
+    .todo-img {
+        width: 3.8vw;
+        margin-left: 1.2vw;
+    }
+    .row {
+        border-radius: 3.5vw;
+        padding-left: 3vw;
+        margin-top: 3vw;
+    }
+    #input-box {
+        padding: 1vw; 
+        font-size: 12px;
+    }
+    .add-btn {
+        border-radius: 3.8vw;
+        padding: 2vw 5vw;
+        font-size: 12px;
+    }
+    ul li {
+        padding: 0.5vw 8vw;
+        font-size: 14px;
+    }
+    ul li::before {
+        width: 2.2vw;
+        height: 1.5vh;
+    }
+    ul li span {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 5.3vw;
+        height: 4.2vh;
+        line-height: 25px;
+    }
+    ul li span img {
+        width: 1.6vw;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .todo-app {
+        width: 55%;
+        padding: 3vw 3vw;
+    }
+    .todo-app h2 {
+        font-size: 22px;
+    }
+    .todo-img {
+        width: 3.8vw;
+        margin-left: 1.2vw;
+    }
+    .row {
+        border-radius: 3.5vw;
+        padding-left: 3vw;
+        margin-top: 3vw;
+    }
+    #input-box {
+        padding: 1vw; 
+        font-size: 14px;
+    }
+    .add-btn {
+        border-radius: 3.8vw;
+        padding: 2vw 5vw;
+        font-size: 14px;
+    }
+    ul li {
+        padding: 0.5vw 5vw;
+        font-size: 15px;
+    }
+    ul li::before {
+        width: 2.2vw;
+        height: 2.5vh;
+        position: absolute;
+        top: 6px;
+    }
+    ul li span {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 3.3vw;
+        height: 4.2vh;
+        line-height: 25px;
+    }
+    ul li span img {
+        width: 1vw;
+    }
+}
